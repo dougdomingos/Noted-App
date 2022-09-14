@@ -1,5 +1,7 @@
 import { Center, Stack } from "@chakra-ui/react";
 
+import Searchbox from "./components/Searchbox";
+
 function App() {
   return (
     <Center h={"100vh"}>
@@ -9,7 +11,9 @@ function App() {
         h={"95vh"}
         maxW={"440px"}
         rounded={"3xl"}
-      ></Stack>
+      >
+        <Searchbox />
+      </Stack>
     </Center>
   );
 }

@@ -11,6 +11,7 @@ function App() {
         h={"95vh"}
         maxW={"440px"}
         rounded={"3xl"}
+        p={6}
       >
         <Searchbox />
       </Stack>

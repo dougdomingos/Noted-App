@@ -7,6 +7,7 @@ function App() {
   return (
     <Center h={"100vh"}>
       <Stack
+        pos={"relative"}
         bgColor={"gray.700"}
         w={"90%"}
         h={"95vh"}

@@ -1,7 +1,8 @@
 import { Center, Stack } from "@chakra-ui/react";
 
-import AddNoteButton from "./components/AddNoteButton";
 import Searchbox from "./components/Searchbox";
+import NoteList from "./components/NoteList";
+import AddNoteButton from "./components/AddNoteButton";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         p={6}
       >
         <Searchbox />
+        <NoteList />
         <AddNoteButton />
       </Stack>
     </Center>

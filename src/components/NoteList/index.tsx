@@ -1,3 +1,5 @@
+import Note from "../Note";
+
 function NoteList() {
   return null;
 }

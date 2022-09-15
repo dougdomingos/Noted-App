@@ -14,6 +14,7 @@ function App() {
         h={"95vh"}
         maxW={"440px"}
         rounded={"3xl"}
+        gap={2}
         p={6}
       >
         <Searchbox />

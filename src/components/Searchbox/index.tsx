@@ -11,7 +11,7 @@ function Searchbox() {
         alignItems={"center"}
         gap={4}
       >
-        <Icon as={HiSearch} fontSize={"3xl"}/>
+        <Icon as={HiSearch} fontSize={"3xl"} />
         <Input
           type={"text"}
           variant={"unstyled"}

@@ -30,7 +30,7 @@ export function Note({ title, content }: TNote) {
           </Text>
         </Stack>
         <IconButton
-          aria-label="Delete note"
+          aria-label='Delete note'
           fontSize={"2xl"}
           variant={"ghost"}
           icon={<HiTrash />}

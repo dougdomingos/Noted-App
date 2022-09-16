@@ -2,9 +2,10 @@ import { Box, Flex, Stack, IconButton, Text } from "@chakra-ui/react";
 import { HiTrash } from "react-icons/hi";
 
 export type TNote = {
+  id?: number;
   title: string;
   content: string;
-  triggerDelete: () => void;
+  triggerDelete?: () => void;
 };
 
 export function Note({ title, content, triggerDelete }: TNote) {

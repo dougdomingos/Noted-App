@@ -4,9 +4,10 @@ import { HiTrash } from "react-icons/hi";
 export type TNote = {
   title: string;
   content: string;
+  triggerDelete: () => void;
 };
 
-export function Note({ title, content }: TNote) {
+export function Note({ title, content, triggerDelete }: TNote) {
   return (
     <Box
       pos={"relative"}
@@ -34,6 +35,7 @@ export function Note({ title, content }: TNote) {
           fontSize={"2xl"}
           variant={"ghost"}
           icon={<HiTrash />}
+          onClick={triggerDelete}
         />
       </Flex>
     </Box>

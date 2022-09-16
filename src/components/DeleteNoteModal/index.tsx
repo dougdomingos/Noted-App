@@ -43,8 +43,12 @@ function DeleteNoteModal({ modalState, closeModal }: TDeleteNoteModal) {
           </Stack>
         </ModalBody>
         <ModalFooter justifyContent={"center"} gap={2}>
-          <Button variant={"outline"} onClick={closeModal}>No, keep it</Button>
-          <Button colorScheme={"red"} onClick={closeModal}>Yes, delete it</Button>
+          <Button variant={"outline"} onClick={closeModal}>
+            No, keep it
+          </Button>
+          <Button colorScheme={"red"} onClick={closeModal}>
+            Yes, delete it
+          </Button>
         </ModalFooter>
       </ModalContent>
     </Modal>

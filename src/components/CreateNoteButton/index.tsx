@@ -1,11 +1,11 @@
 import { Box, IconButton } from "@chakra-ui/react";
 import { HiPlus } from "react-icons/hi";
 
-type TAddNoteButton = {
+type TCreateNoteButton = {
   openModal: () => void;
 };
 
-function AddNoteButton({ openModal }: TAddNoteButton) {
+function CreateNoteButton({ openModal }: TCreateNoteButton) {
   return (
     <Box pos={"absolute"} right={4} bottom={4}>
       <IconButton
@@ -21,4 +21,4 @@ function AddNoteButton({ openModal }: TAddNoteButton) {
   );
 }
 
-export default AddNoteButton;
+export default CreateNoteButton;

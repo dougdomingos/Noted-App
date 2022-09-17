@@ -2,7 +2,6 @@ import { Center, Stack, useDisclosure } from "@chakra-ui/react";
 
 import Searchbox from "./components/Searchbox";
 import NoteList from "./components/NoteList";
-import CreateNoteButton from "./components/CreateNoteButton";
 import NoteModal from "./components/NoteModal";
 import ActionsToggle from "./components/ActionsToggle";
 
@@ -24,7 +23,6 @@ function App() {
         >
           <Searchbox />
           <NoteList />
-          {/* <CreateNoteButton openModal={onOpen} /> */}
           <ActionsToggle />
         </Stack>
       </Center>

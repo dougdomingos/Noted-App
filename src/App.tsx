@@ -4,6 +4,7 @@ import Searchbox from "./components/Searchbox";
 import NoteList from "./components/NoteList";
 import CreateNoteButton from "./components/CreateNoteButton";
 import NoteModal from "./components/NoteModal";
+import ActionsToggle from "./components/ActionsToggle";
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -23,7 +24,8 @@ function App() {
         >
           <Searchbox />
           <NoteList />
-          <CreateNoteButton openModal={onOpen} />
+          {/* <CreateNoteButton openModal={onOpen} /> */}
+          <ActionsToggle />
         </Stack>
       </Center>
       <NoteModal modalState={isOpen} closeModal={onClose} />

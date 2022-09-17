@@ -23,7 +23,7 @@ function App() {
         >
           <Searchbox />
           <NoteList />
-          <ActionsToggle />
+          <ActionsToggle triggerNoteModal={onOpen} />
         </Stack>
       </Center>
       <NoteModal modalState={isOpen} closeModal={onClose} />

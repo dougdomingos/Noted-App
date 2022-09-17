@@ -5,11 +5,18 @@ import {
   MenuItem,
   IconButton,
   Box,
+  useColorMode,
 } from "@chakra-ui/react";
 
-import { HiMenu, HiPlus, HiSun } from "react-icons/hi";
+import { HiMenu, HiMoon, HiPlus, HiSun } from "react-icons/hi";
 
-function ActionsToggle() {
+type TActionsToggle = {
+  triggerNoteModal: () => void;
+};
+
+function ActionsToggle({ triggerNoteModal }: TActionsToggle) {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Box pos={"absolute"} bottom={4} left={4}>
       <Menu>
@@ -20,8 +27,17 @@ function ActionsToggle() {
           fontSize={"2xl"}
         />
         <MenuList>
-          <MenuItem icon={<HiPlus size={20} />}>Create a note</MenuItem>
-          <MenuItem icon={<HiSun size={20} />}>Toggle dark mode</MenuItem>
+          <MenuItem icon={<HiPlus size={20} />} onClick={triggerNoteModal}>
+            Create a note
+          </MenuItem>
+          <MenuItem
+            icon={
+              colorMode === "dark" ? <HiSun size={20} /> : <HiMoon size={20} />
+            }
+            onClick={toggleColorMode}
+          >
+            Toggle {colorMode == "dark" ? "light" : "dark"} mode
+          </MenuItem>
         </MenuList>
       </Menu>
     </Box>

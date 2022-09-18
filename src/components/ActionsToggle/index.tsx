@@ -6,9 +6,10 @@ import {
   IconButton,
   Box,
   useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
-import { HiMenu, HiMoon, HiPlus, HiSun } from "react-icons/hi";
+import { HiViewGrid, HiMoon, HiPlus, HiSun } from "react-icons/hi";
 
 type TActionsToggle = {
   triggerNoteModal: () => void;
@@ -16,6 +17,8 @@ type TActionsToggle = {
 
 function ActionsToggle({ triggerNoteModal }: TActionsToggle) {
   const { colorMode, toggleColorMode } = useColorMode();
+  const menuButtonBgColor = useColorModeValue("white", "gray.900");
+  const menuButtonShadow = useColorModeValue("md", "none");
 
   return (
     <Box pos={"absolute"} bottom={4} left={4}>
@@ -23,8 +26,12 @@ function ActionsToggle({ triggerNoteModal }: TActionsToggle) {
         <MenuButton
           as={IconButton}
           aria-label={"Open Actions menu"}
-          icon={<HiMenu />}
-          fontSize={"2xl"}
+          icon={<HiViewGrid />}
+          bgColor={menuButtonBgColor}
+          fontSize={"3xl"}
+          boxSize={12}
+          rounded={"full"}
+          shadow={menuButtonShadow}
         />
         <MenuList>
           <MenuItem icon={<HiPlus size={20} />} onClick={triggerNoteModal}>

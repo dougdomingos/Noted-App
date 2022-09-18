@@ -1,4 +1,4 @@
-import { Center, Stack, useDisclosure } from "@chakra-ui/react";
+import { Center, Stack, useColorModeValue, useDisclosure } from "@chakra-ui/react";
 
 import Searchbox from "./components/Searchbox";
 import NoteList from "./components/NoteList";
@@ -7,13 +7,16 @@ import ActionsToggle from "./components/ActionsToggle";
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  
+  const backgroundColor = useColorModeValue("gray.50", "gray.800");
+  const appColor = useColorModeValue("gray.200", "gray.700")
 
   return (
     <>
-      <Center h={"100vh"}>
+      <Center h={"100vh"} bgColor={backgroundColor}>
         <Stack
           pos={"relative"}
-          bgColor={"gray.700"}
+          bgColor={appColor}
           w={"90%"}
           h={"95vh"}
           maxW={"440px"}

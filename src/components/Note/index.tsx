@@ -1,4 +1,4 @@
-import { Box, Flex, Stack, IconButton, Text } from "@chakra-ui/react";
+import { Box, Flex, Stack, IconButton, Text, useColorModeValue } from "@chakra-ui/react";
 import { HiTrash } from "react-icons/hi";
 
 export type TNote = {
@@ -9,11 +9,13 @@ export type TNote = {
 };
 
 export function Note({ title, content, triggerDelete }: TNote) {
+  const noteBgColor = useColorModeValue("gray.50", "gray.600");
+
   return (
     <Box
       pos={"relative"}
       w={"full"}
-      bgColor={"gray.600"}
+      bgColor={noteBgColor}
       px={5}
       py={4}
       rounded={"md"}

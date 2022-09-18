@@ -8,6 +8,7 @@ import {
   Text,
   Button,
   Icon,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 import { HiOutlineTrash } from "react-icons/hi";
@@ -18,6 +19,8 @@ type TDeleteNoteModal = {
 };
 
 function DeleteNoteModal({ modalState, closeModal }: TDeleteNoteModal) {
+  const modalIconBgColor = useColorModeValue("red.200", "red.800");
+
   return (
     <Modal isOpen={modalState} onClose={closeModal} size={"sm"} isCentered>
       <ModalOverlay />
@@ -31,8 +34,8 @@ function DeleteNoteModal({ modalState, closeModal }: TDeleteNoteModal) {
             <Icon
               as={HiOutlineTrash}
               boxSize={14}
-              color={"red.400"}
-              bgColor={"red.800"}
+              color={"red.500"}
+              bgColor={modalIconBgColor}
               p={2}
               rounded={"full"}
             />
@@ -46,7 +49,7 @@ function DeleteNoteModal({ modalState, closeModal }: TDeleteNoteModal) {
           <Button variant={"outline"} onClick={closeModal}>
             No, keep it
           </Button>
-          <Button colorScheme={"red"} onClick={closeModal}>
+          <Button colorScheme={"red"} bgColor={"red.500"} onClick={closeModal}>
             Yes, delete it
           </Button>
         </ModalFooter>

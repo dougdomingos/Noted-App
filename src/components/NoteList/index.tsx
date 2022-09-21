@@ -1,4 +1,4 @@
-import { Stack, useDisclosure } from "@chakra-ui/react";
+import { SimpleGrid, useDisclosure } from "@chakra-ui/react";
 import { generateNoteMocks } from "../../utils/noteMocks";
 import DeleteNoteModal from "../DeleteNoteModal";
 import { Note, TNote } from "../Note";
@@ -11,7 +11,7 @@ function NoteList() {
   const notes: TNote[] = generateNoteMocks(6);
 
   return (
-    <Stack gap={1.5} overflowY={"auto"} h={"full"} rounded={"md"}>
+    <SimpleGrid gap={1.5} columns={{ md: 2, lg: 3 }}>
       <DeleteNoteModal modalState={isOpen} closeModal={onClose} />
       {notes.map((note) => (
         <Note
@@ -21,7 +21,7 @@ function NoteList() {
           triggerDelete={onOpen}
         />
       ))}
-    </Stack>
+    </SimpleGrid>
   );
 }
 

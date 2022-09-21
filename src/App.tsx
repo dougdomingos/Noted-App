@@ -17,9 +17,6 @@ function App() {
   const { toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const backgroundColor = useColorModeValue("gray.50", "gray.800");
-  const appColor = useColorModeValue("gray.200", "gray.700");
-
   const triggers: TToolbar = {
     triggerNewNote: onOpen,
     triggerSetTheme: toggleColorMode,
@@ -27,17 +24,8 @@ function App() {
 
   return (
     <>
-      <Center h={"100vh"} bgColor={backgroundColor}>
-        <Stack
-          pos={"relative"}
-          bgColor={appColor}
-          w={"90%"}
-          h={"95vh"}
-          maxW={"440px"}
-          rounded={"xl"}
-          gap={2}
-          p={6}
-        >
+      <Center h={"100vh"}>
+        <Stack w={"70%"} h={"95vh"} rounded={"xl"} gap={2}>
           <Searchbox />
           <NoteList />
           <ToolBar {...triggers} />

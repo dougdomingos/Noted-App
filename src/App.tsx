@@ -34,7 +34,7 @@ function App() {
           w={"90%"}
           h={"95vh"}
           maxW={"440px"}
-          rounded={"3xl"}
+          rounded={"xl"}
           gap={2}
           p={6}
         >

@@ -10,19 +10,37 @@ import {
 import { HiSearch } from "react-icons/hi";
 
 function Searchbox() {
-  const searchboxBgColor = useColorModeValue("gray.50", "gray.600");
+  const searchboxStyles = useColorModeValue(
+    {
+      bgColor: "gray.100",
+      border: "none",
+      borderColor: "none",
+    },
+    {
+      bgColor: "transparent",
+      border: "1px",
+      borderColor: "gray.600",
+    }
+  );
 
   return (
-    <Box w={"full"} h={14} bgColor={searchboxBgColor} rounded={"md"}>
-      <InputGroup h={"full"} px={5}>
+    <Box
+      w={{ base: "full", md: "60%" }}
+      h={12}
+      mx={{ md: "auto" }}
+      rounded={"lg"}
+      {...searchboxStyles}
+    >
+      <InputGroup h={"full"}>
         <Input
           type={"text"}
+          px={4}
           variant={"unstyled"}
           fontSize={"lg"}
           placeholder={"Search notes..."}
         />
-        <InputRightElement h={"full"} mr={5}>
-          <Icon as={HiSearch} boxSize={7} />
+        <InputRightElement h={"full"}>
+          <Icon as={HiSearch} boxSize={6} />
         </InputRightElement>
       </InputGroup>
     </Box>

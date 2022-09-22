@@ -1,4 +1,13 @@
-import { Box, Flex, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Stack,
+  Text,
+  useColorModeValue,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+
+import { trimText } from "../../utils/trimText";
 
 export type TNote = {
   id?: number;
@@ -8,6 +17,12 @@ export type TNote = {
 
 export function Note({ title, content }: TNote) {
   const noteBgColor = useColorModeValue("gray.100", "gray.700");
+
+  const contentMaxLength = useBreakpointValue({
+    base: 120,
+    md: 160,
+    lg: 200,
+  });
 
   return (
     <Box
@@ -23,7 +38,7 @@ export function Note({ title, content }: TNote) {
           <Text as={"span"} fontWeight={600} fontSize={"lg"}>
             {title}
           </Text>
-          <Text overflow={"hidden"}>{content}</Text>
+          <Text overflow={"hidden"}>{trimText(content, contentMaxLength)}</Text>
         </Stack>
       </Flex>
     </Box>

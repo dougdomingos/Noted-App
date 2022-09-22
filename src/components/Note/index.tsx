@@ -7,7 +7,7 @@ export type TNote = {
 };
 
 export function Note({ title, content }: TNote) {
-  const noteBgColor = useColorModeValue("gray.50", "gray.600");
+  const noteBgColor = useColorModeValue("gray.100", "gray.700");
 
   return (
     <Box

@@ -40,7 +40,7 @@ function Toolbar({ triggerNewNote, triggerSetTheme }: TToolbar) {
 
   return (
     <Box>
-      <Flex h={16} justifyContent={"space-around"}>
+      <Flex h={16} justifyContent={"center"} gap={12}>
         <ToolbarAction
           icon={HiPlusCircle}
           label={"New Note"}

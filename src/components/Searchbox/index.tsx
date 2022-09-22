@@ -13,8 +13,6 @@ function Searchbox() {
   const searchboxStyles = useColorModeValue(
     {
       bgColor: "gray.100",
-      border: "none",
-      borderColor: "none",
     },
     {
       bgColor: "transparent",
@@ -26,7 +24,7 @@ function Searchbox() {
   return (
     <Box
       w={{ base: "full", md: "60%" }}
-      h={12}
+      h={16}
       mx={{ md: "auto" }}
       rounded={"lg"}
       {...searchboxStyles}

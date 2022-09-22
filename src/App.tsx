@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       <Center h={"100vh"}>
-        <Stack w={"70%"} h={"95vh"} rounded={"xl"} gap={2}>
+        <Stack w={{ base: "90%", md: "70%"}} h={"95vh"} rounded={"xl"} gap={2}>
           <Searchbox />
           <NoteList />
           <ToolBar {...triggers} />

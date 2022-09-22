@@ -11,7 +11,11 @@ function NoteList() {
   const notes: TNote[] = generateNoteMocks(6);
 
   return (
-    <SimpleGrid gap={1.5} columns={{ md: 2, lg: 3 }}>
+    <SimpleGrid
+      overflowY={"auto"}
+      gap={1.5}
+      columns={{ base: 1, sm: 2, lg: 3 }}
+    >
       <DeleteNoteModal modalState={isOpen} closeModal={onClose} />
       {notes.map((note) => (
         <Note

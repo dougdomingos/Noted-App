@@ -40,7 +40,7 @@ export function Note({ title, content }: TNote) {
           <Text as={"span"} fontWeight={600} fontSize={"lg"}>
             {title}
           </Text>
-          <Text overflow={"hidden"}>{trimmedText}</Text>
+          <Text>{trimmedText}</Text>
         </Stack>
       </Flex>
     </Box>

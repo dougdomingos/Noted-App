@@ -29,7 +29,7 @@ export function Note({ title, content }: TNote) {
   return (
     <Box
       pos={"relative"}
-      h={{ base: 40, sm: 48, md: 56}}
+      h={{ base: 40, sm: 48, md: 56 }}
       bgColor={noteBgColor}
       px={5}
       py={4}

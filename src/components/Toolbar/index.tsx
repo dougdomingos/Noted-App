@@ -34,7 +34,6 @@ const ToolbarAction = ({ icon, label, action }: TTolbarAction) => (
   </Button>
 );
 
-
 function Toolbar({ triggerNewNote, triggerSetTheme }: TToolbar) {
   const themeActionIcon = useColorModeValue(HiMoon, HiSun);
 

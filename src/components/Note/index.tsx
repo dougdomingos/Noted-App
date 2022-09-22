@@ -24,6 +24,8 @@ export function Note({ title, content }: TNote) {
     lg: 200,
   });
 
+  const trimmedText = trimText(content, contentMaxLength);
+
   return (
     <Box
       pos={"relative"}
@@ -38,7 +40,7 @@ export function Note({ title, content }: TNote) {
           <Text as={"span"} fontWeight={600} fontSize={"lg"}>
             {title}
           </Text>
-          <Text overflow={"hidden"}>{trimText(content, contentMaxLength)}</Text>
+          <Text overflow={"hidden"}>{trimmedText}</Text>
         </Stack>
       </Flex>
     </Box>

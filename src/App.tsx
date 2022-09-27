@@ -18,7 +18,7 @@ function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const triggers: TToolbar = {
-    triggerNewNote: onOpen,
+    triggerNoteModal: onOpen,
     triggerSetTheme: toggleColorMode,
   };
 

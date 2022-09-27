@@ -19,7 +19,7 @@ type TTolbarAction = {
 };
 
 export type TToolbar = {
-  triggerNewNote: () => void;
+  triggerNoteModal: () => void;
   triggerSetTheme: () => void;
 };
 
@@ -34,7 +34,7 @@ const ToolbarAction = ({ icon, label, action }: TTolbarAction) => (
   </Button>
 );
 
-function Toolbar({ triggerNewNote, triggerSetTheme }: TToolbar) {
+function Toolbar({ triggerNoteModal, triggerSetTheme }: TToolbar) {
   const themeActionIcon = useColorModeValue(HiMoon, HiSun);
 
   return (
@@ -43,7 +43,7 @@ function Toolbar({ triggerNewNote, triggerSetTheme }: TToolbar) {
         <ToolbarAction
           icon={HiPlusCircle}
           label={"New Note"}
-          action={triggerNewNote}
+          action={triggerNoteModal}
         />
         <ToolbarAction
           icon={themeActionIcon}

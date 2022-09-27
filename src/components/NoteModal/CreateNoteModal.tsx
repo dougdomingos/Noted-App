@@ -12,12 +12,9 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 
-export type TNoteModal = {
-  modalState: boolean;
-  closeModal: () => void;
-};
+import { TNoteModal } from "../NoteModal"
 
-function NoteModal({ modalState, closeModal }: TNoteModal) {
+export function CreateNoteModal({ modalState, closeModal }: TNoteModal) {
   return (
     <Modal
       isOpen={modalState}
@@ -58,4 +55,4 @@ function NoteModal({ modalState, closeModal }: TNoteModal) {
   );
 }
 
-export default NoteModal;
+export default CreateNoteModal;

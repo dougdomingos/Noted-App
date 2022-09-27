@@ -13,12 +13,9 @@ import {
 
 import { HiOutlineTrash } from "react-icons/hi";
 
-type TDeleteNoteModal = {
-  modalState: boolean;
-  closeModal: () => void;
-};
+import { TNoteModal } from "../NoteModal";
 
-function DeleteNoteModal({ modalState, closeModal }: TDeleteNoteModal) {
+export function DeleteNoteModal({ modalState, closeModal }: TNoteModal) {
   const modalIconBgColor = useColorModeValue("red.200", "red.800");
 
   return (

@@ -1,17 +1,9 @@
-import {
-  Center,
-  Stack,
-  useColorMode,
-  useColorModeValue,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Center, Stack, useColorMode, useDisclosure } from "@chakra-ui/react";
 
 import Searchbox from "./components/Searchbox";
 import NoteList from "./components/NoteList";
 import NoteModal from "./components/NoteModal";
-import ToolBar from "./components/Toolbar";
-
-import { TToolbar } from "./components/Toolbar";
+import ToolBar, { TToolbar } from "./components/Toolbar";
 
 function App() {
   const { toggleColorMode } = useColorMode();
